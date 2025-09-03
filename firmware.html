@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Firmware | IoT Smart Display Board</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <main class="container">
+    
+<section class="card">
+  <h2>ESP32 Firmware Outline</h2>
+  <ul class="checklist">
+    <li>Wi‑Fi provisioning (SmartConfig/captive portal)</li>
+    <li>MQTT/HTTP client with reconnect & backoff</li>
+    <li>Message queue with priority & expiry</li>
+    <li>Font & glyph renderer for P10</li>
+    <li>Scrolling engine and brightness control</li>
+    <li>OTA updates & watchdog</li>
+  </ul>
+</section>
+<section class="card">
+  <h2>Pseudo‑Code</h2>
+  <pre>setup():
+  load_config()
+  wifi_connect()
+  mqtt_connect()
+  subscribe("display/{deviceId}/inbox")
+  start_http_poll("/api/messages?active=true", every=60s)
+
+loop():
+  if mqtt_msg: enqueue(mqtt_msg)
+  if time(): purge_expired()
+  if queue not empty: render(next_msg())</pre>
+</section>
+
+  </main>
+  <div id="footer"></div>
+</body>
+</html>

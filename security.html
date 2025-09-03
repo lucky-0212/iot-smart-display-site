@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Security | IoT Smart Display Board</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <main class="container">
+    
+<section class="card">
+  <h2>Security Practices</h2>
+  <ul class="checklist">
+    <li>Use HTTPS for REST and WSS for WebSocket</li>
+    <li>Rotate API keys and short‑lived JWTs</li>
+    <li>Per‑device credentials; deny wildcards</li>
+    <li>Rate limit and validate inputs server‑side</li>
+    <li>Sign OTA firmware and enable secure boot (ESP32)</li>
+  </ul>
+</section>
+<section class="card">
+  <h2>Privacy</h2>
+  <p>Only store what you need (text, schedule, metadata). No PII required for public screens.</p>
+</section>
+
+  </main>
+  <div id="footer"></div>
+</body>
+</html>

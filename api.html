@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>API | IoT Smart Display Board</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <main class="container">
+    
+<section class="card">
+  <h2>HTTP REST</h2>
+  <pre>POST /api/messages
+Authorization: Bearer &lt;jwt&gt;
+Content-Type: application/json
+
+{"text":"Welcome!", "priority":"normal", "expiresAt":"2025-09-10T10:00:00Z"}</pre>
+
+  <h2>WebSocket</h2>
+  <pre>GET /ws?deviceId=abc123
+→ server pushes notices as JSON frames in real‑time</pre>
+
+  <h2>MQTT</h2>
+  <pre>Topic: display/abc123/inbox
+Payload: {"text":"Class starts 9 AM","priority":"high"}</pre>
+</section>
+
+  </main>
+  <div id="footer"></div>
+</body>
+</html>

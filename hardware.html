@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hardware | IoT Smart Display Board</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <main class="container">
+    
+<section class="card">
+  <h2>Bill of Materials (BOM)</h2>
+  <table class="table">
+    <thead><tr><th>Item</th><th>Qty</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>ESP32 DevKit C / NodeMCU-32S</td><td>1</td><td>Wi‑Fi + sufficient GPIOs</td></tr>
+      <tr><td>P10 32×16 LED Matrix (1/4 scan)</td><td>1–N</td><td>Chainable panels</td></tr>
+      <tr><td>P10 HUB75 adapter / level shifter</td><td>1</td><td>3.3V→5V level shifting</td></tr>
+      <tr><td>5V Power Supply</td><td>1</td><td>At least 3A per panel peak</td></tr>
+      <tr><td>Wires, connectors, mounting frame</td><td>—</td><td>As required</td></tr>
+    </tbody>
+  </table>
+</section>
+<section class="card">
+  <h2>Wiring Overview (ESP32 → HUB75)</h2>
+  <ul>
+    <li>Data pins: R1,G1,B1,R2,G2,B2 → GPIOs</li>
+    <li>Address lines: A,B,C,D → GPIOs</li>
+    <li>CLK, LAT, OE → GPIOs</li>
+    <li>Power: 5V (panel), 5V→ESP32 via regulator or USB</li>
+  </ul>
+  <div class="callout">
+    Use a proper ground reference between ESP32 and the LED panels. Keep power cables short and thick.
+  </div>
+</section>
+
+  </main>
+  <div id="footer"></div>
+</body>
+</html>
