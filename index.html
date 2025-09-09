@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IoT Smart Dynamic Display Board</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <header class="hero">
+    <div class="container">
+      <span class="badge">ESP32 • P10 LED • MQTT/HTTP</span>
+      <h1>IoT‑Based Smart Dynamic Display Board & Notice Board System</h1>
+      <p>
+        Traditional notice boards are slow and tedious to update, often leaving outdated information on display.
+        This project delivers a real‑time, remotely managed display board using an ESP32 and P10 LED matrices.
+        Update messages instantly from a web or mobile app—no ladders, no paper, no delays.
+      </p>
+      <div class="hero-cta">
+        <a class="btn" href="pages/demo.html">Try the Demo</a>
+        <a class="btn secondary" href="pages/setup.html">Get Started</a>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="grid">
+      <div class="card" style="grid-column: span 7">
+        <h2>Key Features</h2>
+        <ul class="checklist">
+          <li>Real‑time updates via Web/Mobile app (HTTP/MQTT/WebSocket)</li>
+          <li>Supports single or chained P10 32×16 LED matrix panels</li>
+          <li>Message scheduling, priorities, and auto‑expiry</li>
+          <li>Offline cache with graceful retry when internet drops</li>
+          <li>Admin dashboard with roles, audit log, and analytics</li>
+          <li>Secure updates: API keys, JWT, and device whitelisting</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column: span 5">
+        <h2>Live Preview</h2>
+        <div class="notice-sim" data-marquee data-text="WELCOME • IOT SMART DISPLAY BOARD • UPDATE IN REAL‑TIME" data-speed="80"></div>
+        <p class="small" style="margin-top:.6rem">Simulated ticker representing a P10 matrix scroll.</p>
+      </div>
+    </section>
+    <section class="grid">
+      <div class="card" style="grid-column: span 4">
+        <h3>Architecture</h3>
+        <p>ESP32 firmware connects to Wi‑Fi, subscribes to MQTT topics and/or polls HTTP endpoints, then renders frames to P10 modules.</p>
+        <a href="pages/architecture.html">Explore →</a>
+      </div>
+      <div class="card" style="grid-column: span 4">
+        <h3>Hardware</h3>
+        <p>Bill of Materials, wiring guide, power budget and panel chaining tips for P10 1/4 scan 32×16 LED matrices.</p>
+        <a href="pages/hardware.html">Explore →</a>
+      </div>
+      <div class="card" style="grid-column: span 4">
+        <h3>Firmware</h3>
+        <p>ESP32 code outline: Wi‑Fi/MQTT, message store, font rendering, scrolling engine, OTA updates.</p>
+        <a href="pages/firmware.html">Explore →</a>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Why this solves the problem</h2>
+      <p>
+        Manual boards are inefficient and error‑prone. Our system centralizes content management and pushes updates in seconds.
+        Time‑bound notices auto‑expire, emergency alerts preempt lower‑priority messages, and audit trails show who changed what—and when.
+      </p>
+    </section>
+  </main>
+  <div id="footer"></div>
+</body>
+</html>
